@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import HelloWorld from "./components/HelloWorld";
 import LikeButton from "./components/LikeButton";
+import MouseTracker from "./components/MouseTracker";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         </p>
         <HelloWorld message={'Hello, lw'}/>
         <LikeButton/>
+        <MouseTracker/>
       </header>
     </div>
   );
