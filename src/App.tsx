@@ -6,6 +6,7 @@ import LikeButton from "./components/LikeButton";
 import MouseTracker from "./components/MouseTracker";
 import DogShow from "./components/DogShow";
 import useMousePosition from './hooks/useMousePosition';
+import CatShowWithHook from "./components/CatShowWithHook";
 
 function App() {
   const position = useMousePosition();
@@ -16,6 +17,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <CatShowWithHook/>
         <HelloWorld message={'Hello, lw'}/>
         <LikeButton/>
         <MouseTracker/>
