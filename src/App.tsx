@@ -5,8 +5,10 @@ import HelloWorld from "./components/HelloWorld";
 import LikeButton from "./components/LikeButton";
 import MouseTracker from "./components/MouseTracker";
 import DogShow from "./components/DogShow";
+import useMousePosition from './hooks/useMousePosition';
 
 function App() {
+  const position = useMousePosition();
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +19,7 @@ function App() {
         <HelloWorld message={'Hello, lw'}/>
         <LikeButton/>
         <MouseTracker/>
+        <p>mouse-X:{position.x}, mouse-Y:{position.y}</p>
 
       </header>
     </div>
