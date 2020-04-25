@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import useURLLoader from "../hooks/useURLLoader";
 
-const CatShowWithHook = () =>{
-    const [type,setType]=useState(null);
+const CatShowWithHook:React.FC = () =>{
+    const [type,setType]=useState('5');
     const [loading,data] = useURLLoader(`https://api.thecatapi.com/v1/images/search?limit=1&amp;page=0&amp;category_ids=${type}`);
 
     return(
@@ -17,7 +17,8 @@ const CatShowWithHook = () =>{
             }
             <br/>
         </>
+
     )
 };
 
-export default CatShowWithHook
+export default CatShowWithHook;

@@ -1,8 +1,11 @@
 import  {useState, useEffect} from "react";
 import axios from "axios";
 
-const useURLLoader = (url) =>{
-    const [data,setData]=useState(null);
+type IData = {url:string}
+type IState = [boolean,IData[]]
+
+const useURLLoader = (url:string):IState =>{
+    const [data,setData]=useState([]);
     const [loading,setLoading]=useState(true);
 
     useEffect(()=>{
